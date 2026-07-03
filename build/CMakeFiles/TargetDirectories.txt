@@ -1,0 +1,3 @@
+/home/kushal-n/kushal/sf/sf/build/CMakeFiles/sf.dir
+/home/kushal-n/kushal/sf/sf/build/CMakeFiles/edit_cache.dir
+/home/kushal-n/kushal/sf/sf/build/CMakeFiles/rebuild_cache.dir
