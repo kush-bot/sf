@@ -12,7 +12,8 @@ namespace sf::Data
 
   CSVFEED::CSVFEED(const std::string &file) : file_(file), filename_(file)
   {
-    file_.open(filename_);
+
+    file_.exceptions(std::ios::failbit | std::ios::badbit);
     std::string line;
     if (!file_.is_open())
     {
@@ -83,4 +84,6 @@ namespace sf::Data
     return true;
 
   }
+  
+
 } // namespace sf::Data

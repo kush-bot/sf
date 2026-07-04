@@ -12,7 +12,6 @@ class CSVFEED:public IDataFeed{
     std::string filename_;
     bool parseLine(const std::string& line, sf::Data::Candle& candle);
   
-
   public:
     explicit CSVFEED(const std::string& filename);
     bool next(sf::Data::Candle& canle) override;
