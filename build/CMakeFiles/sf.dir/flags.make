@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/kushal-n/kushal/sf/sf/include -I/home/kushal-n/kushal/sf/sf/src
+CXX_INCLUDES = -I/home/kushal-n/kushal/sf/sf/include -I/home/kushal-n/kushal/sf/sf/src -I/home/kushal-n/kushal/sf/sf/types/includes
 
 CXX_FLAGS = -std=gnu++20
 

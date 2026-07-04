@@ -177,6 +177,30 @@ src/Data/CsvFeed.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sf.dir/build.make CMakeFiles/sf.dir/src/Data/CsvFeed.cpp.s
 .PHONY : src/Data/CsvFeed.cpp.s
 
+types/src/Datetime.o: types/src/Datetime.cpp.o
+.PHONY : types/src/Datetime.o
+
+# target to build an object file
+types/src/Datetime.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sf.dir/build.make CMakeFiles/sf.dir/types/src/Datetime.cpp.o
+.PHONY : types/src/Datetime.cpp.o
+
+types/src/Datetime.i: types/src/Datetime.cpp.i
+.PHONY : types/src/Datetime.i
+
+# target to preprocess a source file
+types/src/Datetime.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sf.dir/build.make CMakeFiles/sf.dir/types/src/Datetime.cpp.i
+.PHONY : types/src/Datetime.cpp.i
+
+types/src/Datetime.s: types/src/Datetime.cpp.s
+.PHONY : types/src/Datetime.s
+
+# target to generate assembly for a file
+types/src/Datetime.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sf.dir/build.make CMakeFiles/sf.dir/types/src/Datetime.cpp.s
+.PHONY : types/src/Datetime.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -192,6 +216,9 @@ help:
 	@echo "... src/Data/CsvFeed.o"
 	@echo "... src/Data/CsvFeed.i"
 	@echo "... src/Data/CsvFeed.s"
+	@echo "... types/src/Datetime.o"
+	@echo "... types/src/Datetime.i"
+	@echo "... types/src/Datetime.s"
 .PHONY : help
 
 
