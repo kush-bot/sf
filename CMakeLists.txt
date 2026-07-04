@@ -6,7 +6,6 @@ project(sf)
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-add_executable(sf main.cpp src/Data/CsvFeed.cpp)
+add_executable(sf main.cpp src/Data/CsvFeed.cpp types/src/Datetime.cpp)
 
-
-target_include_directories(sf PRIVATE include src)
+target_include_directories(sf PRIVATE include src types/includes)

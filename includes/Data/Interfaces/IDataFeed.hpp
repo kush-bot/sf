@@ -1,5 +1,5 @@
-#pragma once
 #ifndef IDATA_FEED_H
+#define IDATA_FEED_H
 
 
 #include "./Candle.hpp"

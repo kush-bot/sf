@@ -1,47 +1,86 @@
 #include "../../includes/Data/CsvFeed.hpp"
 #include <cmath>
+#include <ctime>
 #include <exception>
+#include <sstream>
 #include <string>
 #include "exception"
 #include <iostream>
 
-namespace sf::Data {
+namespace sf::Data
+{
 
-CSVFEED::CSVFEED(const std::string& file):file_(file),filename_(file){
-  transform();
-}
+  CSVFEED::CSVFEED(const std::string &file) : file_(file), filename_(file)
+  {
+    file_.open(filename_);
+    std::string line;
+    if (!file_.is_open())
+    {
+      throw std::runtime_error("File not found  : " + filename_);
+    }
 
-bool CSVFEED::next(sf::Data::Candle& Candle){
-        return true;      
-}
-
-void CSVFEED::transform(){
-  std::string line;
-
-  try{
-      if(!file_.is_open()){
-        std::cout<<"File name "<<filename_;
-       throw std::runtime_error("file not found : " + filename_);
-      }
-      
-      while(std::getline(file_,line)){
-        std::cout<<line<<std::endl;
-      }
-
-
-
-  }catch(const std::exception& e){
-    std::cout << e.what();
+    std::getline(file_, line);
+    std::getline(file_, line);
+    std::getline(file_, line);
   }
-}
 
-bool CSVFEED::reset(){
-  return true;
-}
+  CSVFEED::~CSVFEED()
+  {
+    if (file_.is_open())
+    {
+      file_.close();
+    }
+  }
 
+  bool CSVFEED::next(sf::Data::Candle &Candle)
+  {
+    std::string line;
+
+    if (std::getline(file_, line))
+    {
+      return parseLine(line, Candle);
+    }
+
+    return false;
+  }
+
+  bool CSVFEED::reset()
+  {
+    return true;
+  }
+
+  bool CSVFEED::parseLine(const std::string &line, sf::Data::Candle &candle){
+    size_t start=0;
+    size_t end  = line.find(',');
+    
+    try{
+      candle.timestamp = sf::types::Datetime(line.substr(start,end-start));
+
+      start = end+1;
+      end = line.find(',',start);
+      candle.open = std::stod(line.substr(start,end-start));
+
+      start = end+1;
+      end = line.find(',',start);
+      candle.high = std::stod(line.substr(start,end-start));
+
+      start=end+1;
+      end=line.find(',',start);
+      candle.low = std::stod(line.substr(start,end-start));
+
+      start = end+1;
+      end = line.find(',',start);
+      candle.close = std::stod(line.substr(start,end-start));
+
+      start = end+1;
+      end = line.find(',',start);
+      candle.volume = std::stod(line.substr(start,end-start));
+
+    }catch(const std::exception& exc){
+      std::cout<<"error while parsing line : " <<line<<std::endl;
+      return false ;
+    }
+    return true;
+
+  }
 } // namespace sf::Data
-
-
-
-
-
