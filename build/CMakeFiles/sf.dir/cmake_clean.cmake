@@ -3,6 +3,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/sf.dir/main.cpp.o.d"
   "CMakeFiles/sf.dir/src/Data/CsvFeed.cpp.o"
   "CMakeFiles/sf.dir/src/Data/CsvFeed.cpp.o.d"
+  "CMakeFiles/sf.dir/types/src/Datetime.cpp.o"
+  "CMakeFiles/sf.dir/types/src/Datetime.cpp.o.d"
   "sf"
   "sf.pdb"
 )

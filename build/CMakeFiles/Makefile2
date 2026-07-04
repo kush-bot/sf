@@ -81,12 +81,12 @@ clean: CMakeFiles/sf.dir/clean
 CMakeFiles/sf.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sf.dir/build.make CMakeFiles/sf.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sf.dir/build.make CMakeFiles/sf.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/kushal-n/kushal/sf/sf/build/CMakeFiles --progress-num=1,2,3 "Built target sf"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/kushal-n/kushal/sf/sf/build/CMakeFiles --progress-num=1,2,3,4 "Built target sf"
 .PHONY : CMakeFiles/sf.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/sf.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kushal-n/kushal/sf/sf/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kushal-n/kushal/sf/sf/build/CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/sf.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kushal-n/kushal/sf/sf/build/CMakeFiles 0
 .PHONY : CMakeFiles/sf.dir/rule

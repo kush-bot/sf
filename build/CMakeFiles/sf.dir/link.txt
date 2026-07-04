@@ -1,1 +1,1 @@
-/usr/bin/c++ CMakeFiles/sf.dir/main.cpp.o CMakeFiles/sf.dir/src/Data/CsvFeed.cpp.o -o sf 
+/usr/bin/c++ CMakeFiles/sf.dir/main.cpp.o CMakeFiles/sf.dir/src/Data/CsvFeed.cpp.o CMakeFiles/sf.dir/types/src/Datetime.cpp.o -o sf 
