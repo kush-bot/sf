@@ -2,23 +2,24 @@
 
 #include <string>
 
-namespace sf::types{
+namespace sf::types {
 
-class Datetime{
+class Datetime {
 private:
-  int year;
-  int month;
-  int date;
-  int hour;
-  int minute;
-  int seconds;
+    int year = 0;
+    int month = 0;
+    int day = 0;
+    int hour = 0;
+    int minute = 0;
+    int seconds = 0;
+
 public:
-   Datetime()=default;
-   Datetime(std::string& date){
-   }
-   Datetime(const Datetime&) = default;
-   //copy assignment 
-   Datetime& operator=(const Datetime&) = default;
+    Datetime() = default;
+    explicit Datetime(const std::string& datestring);
+    Datetime(const Datetime&) = default;
+    
+    // copy assignment 
+    Datetime& operator=(const Datetime&) = default;
 };
 
-}
+} // namespace sf::types
